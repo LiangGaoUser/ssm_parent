@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhongruan.dao.ISoundCardDao" >
+    <select id="findAllSoundCardInformation" resultType="com.zhongruan.bean.Soundcard">
+       select*from soundcard_table
+   </select>
+    <select id="findSelectSoundCard" resultType="com.zhongruan.bean.Soundcard" parameterType="com.zhongruan.bean.Soundcard">
+       select*from soundcard_table where soundCard_id=#{soundCard_id}
+   </select>
+</mapper>

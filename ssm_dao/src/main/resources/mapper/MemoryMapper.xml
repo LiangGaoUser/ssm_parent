@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhongruan.dao.IMemoryDao" >
+    <select id="findAllMemoryInformation" resultType="com.zhongruan.bean.Memory">
+       select*from memory_table
+   </select>
+    <select id="findSelectMemory" resultType="com.zhongruan.bean.Memory" parameterType="com.zhongruan.bean.Memory">
+       select*from memory_table where memory_id=#{memory_id}
+   </select>
+</mapper>

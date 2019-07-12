@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhongruan.dao.IKeyboardDao" >
+    <select id="findAllKeyboardInformation" resultType="com.zhongruan.bean.Keyboard">
+       select*from keyboard_table
+   </select>
+
+    <select id="findSelectKeyboard" parameterType="com.zhongruan.bean.Keyboard" resultType="com.zhongruan.bean.Keyboard">
+       select*from keyboard_table where keyboard_id=#{keyboard_id}
+   </select>
+</mapper>

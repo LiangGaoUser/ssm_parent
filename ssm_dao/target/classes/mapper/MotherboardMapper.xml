@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhongruan.dao.IMotherboardDao" >
+    <select id="findAllMotherboardInformation" resultType="com.zhongruan.bean.Motherboard">
+       select*from motherboard_table
+   </select>
+    <select id="findSelectMotherboard" resultType="com.zhongruan.bean.Motherboard" parameterType="com.zhongruan.bean.Motherboard">
+       select*from motherboard_table where motherboard_id=#{motherboard_id}
+   </select>
+</mapper>

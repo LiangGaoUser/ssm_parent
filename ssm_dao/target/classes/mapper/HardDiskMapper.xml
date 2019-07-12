@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhongruan.dao.IHardDiskDao" >
+    <select id="findAllHDInformation" resultType="com.zhongruan.bean.Harddisk">
+       select*from harddisk_table
+   </select>
+    <select id="findSelectHarddisk" resultType="com.zhongruan.bean.Harddisk" parameterType="com.zhongruan.bean.Harddisk">
+       select*from harddisk_table where hardDisk_id=#{hardDisk_id}
+   </select>
+</mapper>

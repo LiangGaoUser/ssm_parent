@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhongruan.dao.IUserDao" >
+    <select id="findAll" resultType="com.zhongruan.bean.UserInfo">
+    select*from userinfo
+</select>
+
+    <select id="dologin" parameterType="com.zhongruan.bean.UserInfo" resultType="com.zhongruan.bean.UserInfo">
+        select * from userinfo where tel_num=#{tel_num} and password=#{password}
+    </select>
+
+    <insert id="save" parameterType="com.zhongruan.bean.UserInfo">
+      insert into userinfo (id,username,password) values (#{id},#{username},#{password})
+    </insert>
+    <delete id="delete" parameterType="int">
+        delete from userinfo where id=#{id}
+    </delete>
+    <!--<update id="update" parameterType="java.util.Map">-->
+        <!--update userinfo set id=#{id} ,username=#{username},password=#{password} where id=#{selectId}-->
+    <!--</update>-->
+
+    <select id="queryById" parameterType="int" resultType="com.zhongruan.bean.UserInfo">
+        select*from userinfo where id=#{id}
+    </select>
+    <select id="forID" parameterType="com.zhongruan.bean.UserInfo" resultType="com.zhongruan.bean.UserInfo">
+        select*from userinfo where tel_num=#{tel_num}
+    </select>
+    <update id="changetel_num"  parameterType="com.zhongruan.bean.UserInfo">
+        update userinfo set username=#{username} where tel_num=#{tel_num}
+    </update>
+    <!--<update id="changePassWord"  parameterType="com.zhongruan.bean.UserInfo">-->
+        <!--update userinfo set password=#{password} where tel_num=#{tel_num}-->
+    <!--</update>-->
+    <update id="changePassWord"  parameterType="java.util.Map">
+        update userinfo set password=#{password} where  tel_num=#{tel_num} and password=#{oldpassword}
+    </update>
+    <select id="queryByNumAndPwd" parameterType="com.zhongruan.bean.UserInfo" resultType="com.zhongruan.bean.UserInfo">
+        select * from userinfo where tel_num=#{tel_num} and password=#{password}
+    </select>
+    <insert id="register" parameterType="com.zhongruan.bean.UserInfo" >
+      insert into userinfo (username,password,tel_num) values (#{username},#{password},#{tel_num})
+    </insert>
+
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhongruan.dao.ICpuDao" >
+   <select id="findAllCpuInformation" resultType="com.zhongruan.bean.Cpu">
+       select*from cpu_table
+   </select>
+    <select id="findSelectCpu" resultType="com.zhongruan.bean.Cpu" parameterType="com.zhongruan.bean.Cpu">
+       select*from cpu_table where cpu_id=#{cpu_id}
+   </select>
+
+
+
+    <select id="findCpuByBrand" resultType="com.zhongruan.bean.Cpu" parameterType="String">
+    select * from cpu_table where cpu_brand=#{cpu_brand}
+</select>
+    <select id="findCpuBySeries" resultType="com.zhongruan.bean.Cpu" parameterType="String">
+    select * from cpu_table where cpu_series=#{cpu_series}
+</select>
+    <select id="findCpuByslotType" resultType="com.zhongruan.bean.Cpu" parameterType="String">
+    select * from cpu_table where cpu_slotType=#{cpu_slotType}
+</select>
+    <select id="findCpuBycoreNumber" resultType="com.zhongruan.bean.Cpu" parameterType="String">
+    select * from cpu_table where cpu_coreNumber=#{cpu_coreNumber}
+</select>
+    <select id="findCpuByintegTool" resultType="com.zhongruan.bean.Cpu" parameterType="String">
+    select * from cpu_table where cpu_integTool=#{cpu_integTool}
+</select>
+
+
+
+
+
+</mapper>

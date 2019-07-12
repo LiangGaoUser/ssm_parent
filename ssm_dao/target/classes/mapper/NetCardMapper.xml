@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhongruan.dao.INetCardDao" >
+    <select id="findAllNetCardInformation" resultType="com.zhongruan.bean.Netcard">
+       select*from netcard_table
+   </select>
+    <select id="findSelectNetCard" resultType="com.zhongruan.bean.Netcard" parameterType="com.zhongruan.bean.Netcard">
+       select*from netcard_table where netcard_id=#{netcard_id}
+   </select>
+</mapper>

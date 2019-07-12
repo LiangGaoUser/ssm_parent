@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhongruan.dao.IGraphicsDao" >
+    <select id="findAllGraphicsInformation" resultType="com.zhongruan.bean.Graphics">
+       select*from graphics_table
+   </select>
+    <select id="findSelectGraphics" resultType="com.zhongruan.bean.Graphics" parameterType="com.zhongruan.bean.Graphics">
+       select*from graphics_table where graphics_id=#{graphics_id}
+   </select>
+</mapper>
