@@ -274,8 +274,8 @@
                                     <%--<li class="active"><a href="#">USD $</a></li>--%>
                                     <%--</ul>--%>
                                     <%--</div>--%>
-                                    <a  href="${pageContext.request.contextPath}/user/toSelfPage.do">${selfInfo.username}</a>
-                                    <%--<a  href="${pageContext.request.contextPath}/sheet/findSelectSheet.do">${selfInfo.username}</a>--%>
+                                    <%--<a  href="${pageContext.request.contextPath}/user/toSelfPage.do">${selfInfo.username}</a>--%>
+                                    <a  href="${pageContext.request.contextPath}/sheet/findSelectSheet.do">${selfInfo.username}</a>
 
                                 </li>
                                 <!-- Language Area End Here -->

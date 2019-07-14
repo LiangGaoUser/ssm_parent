@@ -91,6 +91,17 @@
                                 <div class="product-details-thumbs slider-thumbs-1">
                                     <div class="sm-image"><img src="${cpu_list.get(num).cpu_img}" alt="product image thumb"></div>
                                     <div class="sm-image"><img src="${graphics_list.get(num).graphics_img}" alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="${harddisk_list.get(num).hardDisk_img}" alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="${keyboard_list.get(num).keyboard_img}" alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="${mouse_list.get(num).mouse_img}" alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="${memory_list.get(num).memory_img}" alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="${netcard_list.get(num).netcard_img}" alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="${monitor_list.get(num).monitor_img}" alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="${motherboard_list.get(num).motherboard_img}" alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="${power_list.get(num).power_img}" alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="${soundcard_list.get(num).soundCard_img}" alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="${ssd_list.get(num).ssd_img}" alt="product image thumb"></div>
+
                                 </div>
                                 <div class="product-details-images slider-navigation-1">
                                 </div>
