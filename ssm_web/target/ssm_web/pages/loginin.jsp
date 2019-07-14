@@ -76,9 +76,7 @@
                                 <!-- Begin Header Mini Cart Area -->
                                 <li class="hm-minicart">
                                     <div class="hm-minicart-trigger">
-                                        <%--<span class="item-icon">返回主页面</span>--%>
-                                        <span class="item-text">返回主界面
-                                                    <%--<span class="cart-item-count">2</span>--%>
+                                        <span class="item-text"  onclick="location.href='${pageContext.request.contextPath}/user/toMain.do'">返回主界面
                                         </span>
                                     </div>
                                     <span></span>

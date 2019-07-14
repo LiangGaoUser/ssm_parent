@@ -185,11 +185,13 @@ public class SheetController {
             List<Cpu> cpu_list2=cpuService.findSelectCpu(cpu);
             if(cpu_list2!=null){
                 cpu.setCpu_img("../"+cpu_list2.get(0).getCpu_img());
+                cpu.setCpu_name(cpu_list2.get(0).getCpu_name());
                 System.out.println(cpu.getCpu_img());
                 cpu_list.add(i,cpu);
             }
             else{
                 cpu.setCpu_img("../empty.jpg");
+                cpu.setCpu_name("配置单中没有cpu");
                 cpu_list.set(i,cpu);
             }
         }
@@ -211,10 +213,12 @@ public class SheetController {
             if(graphics_list2!=null){
                 graphics.setGraphics_img("../"+graphics_list2.get(0).getGraphics_img());
                 System.out.println(graphics.getGraphics_img());
+                graphics.setGraphics_name(graphics_list2.get(0).getGraphics_name());
                 graphics_list.add(i,graphics);
             }
             else{
                 graphics.setGraphics_img("../empty.jpg");
+                graphics.setGraphics_name("配置单中没有显卡");
                 graphics_list.set(i,graphics);
             }
         }
@@ -235,11 +239,13 @@ public class SheetController {
             List<Harddisk> harddisk_list2=hardDiskService.findSelectHarddisk(harddisk);
             if(harddisk_list2!=null){
                 harddisk.setHardDisk_img("../"+harddisk_list2.get(0).getHardDisk_img());
+                harddisk.setHardDisk_name(harddisk_list2.get(0).getHardDisk_name());
                 System.out.println(harddisk.getHardDisk_img());
                 harddisk_list.add(i,harddisk);
             }
             else{
                 harddisk.setHardDisk_img("../empty.jpg");
+                harddisk.setHardDisk_name("配置单中没有硬盘");
                 harddisk_list.set(i,harddisk);
             }
         }
@@ -259,11 +265,13 @@ public class SheetController {
             List<Keyboard> Keyboard_list2=keyboardService.findSelectKeyboard(keyboard);
             if(Keyboard_list2!=null){
                 keyboard.setKeyboard_img("../"+Keyboard_list2.get(0).getKeyboard_img());
+                keyboard.setKeyboard_name(Keyboard_list2.get(0).getKeyboard_name());
                 System.out.println(keyboard.getKeyboard_img());
                 keyboard_list.add(i,keyboard);
             }
             else{
                 keyboard.setKeyboard_img("../empty.jpg");
+                keyboard.setKeyboard_name("配置单中没有硬盘");
                 keyboard_list.set(i,keyboard);
             }
         }
@@ -284,11 +292,13 @@ public class SheetController {
             List<Mouse> mouse_list2=mouseService.findSelectMouse(mouse);
             if(mouse_list2!=null){
                 mouse.setMouse_img("../"+mouse_list2.get(0).getMouse_img());
+                mouse.setMouse_name(mouse_list2.get(0).getMouse_name());
                 System.out.println(mouse.getMouse_img());
                 mouse_list.add(i,mouse);
             }
             else{
                 mouse.setMouse_img("../empty.jpg");
+                mouse.setMouse_name("配置单中没有鼠标");
                 mouse_list.set(i,mouse);
             }
         }
@@ -308,11 +318,13 @@ public class SheetController {
             List<Memory> memory_list2=memeoryService.findSelectMemory(memory);
             if(memory_list2!=null){
                 memory.setMemory_img("../"+memory_list2.get(0).getMemory_img());
+                memory.setMemory_name(memory_list2.get(0).getMemory_name());
                 System.out.println(memory.getMemory_img());
                 memory_list.add(i,memory);
             }
             else{
                 memory.setMemory_img("../empty.jpg");
+                memory.setMemory_name("配置单中没有内存条");
                 memory_list.set(i,memory);
             }
         }
@@ -333,11 +345,13 @@ public class SheetController {
             List<Monitor> monitor_list2=monitorService.findSelectMonitor(monitor);
             if(monitor_list2!=null){
                 monitor.setMonitor_img("../"+monitor_list2.get(0).getMonitor_img());
+                monitor.setMonitor_name(monitor_list2.get(0).getMonitor_name());
                 System.out.println(monitor.getMonitor_img());
                 monitor_list.add(i,monitor);
             }
             else{
                 monitor.setMonitor_img("../empty.jpg");
+                monitor.setMonitor_name("配置单中没有显示器");
                 monitor_list.set(i,monitor);
             }
         }
@@ -357,11 +371,13 @@ public class SheetController {
             List<Netcard> netcard_list2=netCardService.findSelectNetcard(netcard);
             if(netcard_list2!=null){
                 netcard.setNetcard_img("../"+netcard_list2.get(0).getNetcard_img());
+                netcard.setNetcard_name(netcard_list2.get(0).getNetcard_name());
                 System.out.println(netcard.getNetcard_img());
                 netcard_list.add(i,netcard);
             }
             else{
                 netcard.setNetcard_img("../empty.jpg");
+                netcard.setNetcard_name("配置单中没有网卡");
                 netcard_list.set(i,netcard);
             }
         }
@@ -383,11 +399,13 @@ public class SheetController {
             List<Motherboard> motherboard_list2=motherboardService.findSelectMotherboard(motherboard);
             if(motherboard_list2!=null){
                 motherboard.setMotherboard_img("../"+motherboard_list2.get(0).getMotherboard_img());
+                motherboard.setMotherboard_name(motherboard_list2.get(0).getMotherboard_name());
                 System.out.println(motherboard.getMotherboard_img());
                 motherboard_list.add(i,motherboard);
             }
             else{
                 motherboard.setMotherboard_img("../empty.jpg");
+                motherboard.setMotherboard_name("配置单中没有主板");
                 motherboard_list.set(i,motherboard);
             }
         }
@@ -406,11 +424,13 @@ public class SheetController {
             List<Power> power_list2=powerService.findSelectPower(power);
             if(power_list2!=null){
                 power.setPower_img("../"+power_list2.get(0).getPower_img());
+                power.setPower_name(power_list2.get(0).getPower_name());
                 System.out.println(power.getPower_img());
                 power_list.add(i,power);
             }
             else{
                 power.setPower_img("../empty.jpg");
+                power.setPower_name("配置单中没有电源");
                 power_list.set(i,power);
             }
         }
@@ -430,11 +450,13 @@ public class SheetController {
             List<Soundcard> soundcard_list2=soundCardService.findSelectSoundCard(soundcard);
             if(soundcard_list2!=null){
                 soundcard.setSoundCard_img("../"+soundcard_list2.get(0).getSoundCard_img());
+                soundcard.setSoundCard_name(soundcard_list2.get(0).getSoundCard_name());
                 System.out.println(soundcard.getSoundCard_img());
                 soundcard_list.add(i,soundcard);
             }
             else{
                 soundcard.setSoundCard_img("../empty.jpg");
+                soundcard.setSoundCard_name("配置单中没有声卡");
                 soundcard_list.set(i,soundcard);
             }
         }
@@ -454,11 +476,13 @@ public class SheetController {
             List<Ssd> ssd_list2=ssdService.findSelectSsd(ssd);
             if(ssd_list2!=null){
                 ssd.setSsd_img("../"+ssd_list2.get(0).getSsd_img());
+                ssd.setSsd_name(ssd_list2.get(0).getSsd_name());
                 System.out.println(ssd.getSsd_img());
                 ssd_list.add(i,ssd);
             }
             else{
                 ssd.setSsd_img("../empty.jpg");
+                ssd.setSsd_name("配置单中没有固态硬盘");
                 ssd_list.set(i,ssd);
             }
         }
